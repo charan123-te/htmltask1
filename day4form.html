@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color:violet;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color:indigo;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        section {
+            background: white;
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Registration Form</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Register</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+    <h2>Register</h2>
+
+    <form>
+        Name:
+        <input type="text" placeholder="Enter your name">
+
+        Email:
+        <input type="email" placeholder="Enter your email">
+
+        Password:
+        <input type="password">
+        Confirm Password:
+        <input type="password"><br><br>
+        date of birth:
+        <input type="date"><br><br>
+        university roll number:
+        <input type="text" placeholder="Enter your university roll number"><br><br>
+        adhar number:
+        <input type="text" placeholder="Enter your adhar number"><br><br>
+        address:
+        <input type="text" placeholder="Enter your address"><br><br>
+
+        Gender:<br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female<br><br>
+
+        Hobbies:<br>
+        <input type="checkbox"> Reading
+        <input type="checkbox"> Coding
+        <input type="checkbox"> Gaming<br><br>
+
+        Course:
+        <select>
+            <option>B.Tech</option>
+            <option>B.Sc</option>
+            <option>BCA</option>
+        </select>
+        <select>
+            <option>cse</option>
+            <option>ece</option>
+            <option>mech</option>
+            <option>civil</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <h3>Sample Academic Info</h3>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>2026</td>
+            <td>B.Tech</td>
+        </tr>
+        <tr>
+            <td>2026</td>
+            <td>B.sc</td>
+        </tr>
+            <tr>
+                <td>2026</td>
+                <td>BCA</td>
+            </tr>
+    </table>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Student Portal</p>
+</footer>
+
+</body>
+</html>
