@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced UI Layout</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL TYPOGRAPHY */
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  background: #f4f6f8;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* =========================
+   TASK 1: PROFILE CARD
+========================= */
+
+.profile-card {
+  width: 340px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.profile-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile-card .role {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.profile-card p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-card .stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile-card .stats div {
+  font-size: 14px;
+}
+
+/* =========================
+   TASK 2: HERO SECTION
+========================= */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 750px;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.hero .features {
+  margin: 20px 0;
+  font-size: 15px;
+  color: #ccc;
+}
+
+/* =========================
+   TASK 3: STACKED CONTENT
+========================= */
+
+.content-section {
+  width: 85%;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.content-block {
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.content-block h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content-block p {
+  margin-bottom: 15px;
+}
+
+.content-block ul {
+  padding-left: 20px;
+}
+
+.content-block li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* EXTRA VISUAL POLISH */
+.content-block:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     PROFILE CARD
+========================= -->
+<div class="profile-card">
+  <h2>vennapusa charan teja reddy</h2>
+  <div class="role">associate software Engineer</div>
+
+  <p>
+    Passionate about crafting scalable, high-performance web applications.
+    Specialized in modern UI/UX, accessibility, and responsive design systems.
+  </p>
+
+  <div class="stats">
+    <div><strong>120+</strong><br>Projects</div>
+    <div><strong>1 yrs</strong><br>Experience</div>
+    <div><strong>50k</strong><br>Followers</div>
+  </div>
+
+  <button>Connect</button>
+</div>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Build Stunning Web Experiences</h1>
+
+    <p>
+      Design, develop, and deploy modern web interfaces that are fast,
+      responsive, and visually compelling across all devices.
+    </p>
+
+    <div class="features">
+      ✔ Responsive Design &nbsp; | &nbsp;
+      ✔ Clean UI Systems &nbsp; | &nbsp;
+      ✔ Scalable Architecture
+    </div>
+
+    <button>Start Learning</button>
+  </div>
+</section>
+
+
+<!-- =========================
+     STACKED CONTENT
+========================= -->
+<section class="content-section">
+
+  <div class="content-block">
+    <h3>1. Modern Web Development</h3>
+    <p>
+      Modern web development focuses on building performant and scalable applications
+      using advanced tools, frameworks, and best practices.
+    </p>
+    <ul>
+      <li>Component-based architecture</li>
+      <li>Reusable UI patterns</li>
+      <li>Performance optimization</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h3>2. UI / UX Principles</h3>
+    <p>
+      Good design is not just about looks—it’s about usability, accessibility,
+      and delivering a smooth user experience.
+    </p>
+    <ul>
+      <li>Visual hierarchy and spacing</li>
+      <li>Consistent typography</li>
+      <li>Accessible design patterns</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h3>3. Responsive Design</h3>
+    <p>
+      Ensuring your layout adapts seamlessly across mobile, tablet, and desktop
+      devices is critical in today’s multi-device ecosystem.
+    </p>
+    <ul>
+      <li>Flexible layouts</li>
+      <li>Media queries</li>
+      <li>Mobile-first approach</li>
+    </ul>
+  </div>
+
+</section>
+
+</body>
+</html>
