@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification Card Interface</title>
+
+  <style>
+    /* ================= GLOBAL STYLES ================= */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f6f9;
+      line-height:1.7;
+      color:#333;
+    }
+
+    /* ================= HEADER SECTION ================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      background:#1e293b;
+      color:white;
+
+      padding:20px 40px;
+
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:15px;
+      max-width:1000px;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+
+    .main-container{
+      width:95%;
+      max-width:1400px;
+      margin:40px auto;
+    }
+
+    .intro-section{
+      background:white;
+      padding:35px;
+      border-radius:15px;
+      margin-bottom:40px;
+
+      box-shadow:0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .intro-section h2{
+      font-size:30px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .intro-section p{
+      margin-bottom:18px;
+      text-align:justify;
+    }
+
+    /* ================= CARD LAYOUT ================= */
+
+    .card-container{
+      display:flex;
+      gap:30px;
+      justify-content:center;
+      flex-wrap:wrap;
+
+      margin-top:40px;
+      margin-bottom:60px;
+    }
+
+    .card{
+      position:relative;
+
+      width:360px;
+      background:white;
+
+      border-radius:16px;
+      padding:30px;
+
+      overflow:hidden;
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    /* ================= BADGE ELEMENT ================= */
+
+    .badge{
+      position:absolute;
+      top:15px;
+      right:15px;
+
+      width:35px;
+      height:35px;
+
+      border-radius:50%;
+
+      background:red;
+      color:white;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      font-weight:bold;
+      font-size:16px;
+    }
+
+    .card h3{
+      margin-top:15px;
+      margin-bottom:15px;
+      font-size:28px;
+      color:#111827;
+    }
+
+    .card p{
+      margin-bottom:18px;
+      text-align:justify;
+      color:#4b5563;
+    }
+
+    .card button{
+      background:#2563eb;
+      color:white;
+
+      border:none;
+      padding:12px 20px;
+
+      border-radius:8px;
+
+      cursor:pointer;
+      font-size:15px;
+
+      transition:0.3s;
+    }
+
+    .card button:hover{
+      background:#1d4ed8;
+    }
+
+    /* ================= HIDDEN MESSAGE ================= */
+
+    /* Hidden using visibility */
+
+    .message-visibility{
+      visibility:hidden;
+
+      background:#d1fae5;
+      color:#065f46;
+
+      margin-top:20px;
+      padding:12px;
+
+      border-radius:8px;
+      font-weight:bold;
+      text-align:center;
+    }
+
+    /* Hidden using display */
+
+    .message-display{
+      display:none;
+
+      background:#fee2e2;
+      color:#991b1b;
+
+      margin-top:20px;
+      padding:12px;
+
+      border-radius:8px;
+      font-weight:bold;
+      text-align:center;
+    }
+
+    /* Show messages on hover */
+
+    .card:hover .message-visibility{
+      visibility:visible;
+    }
+
+    .card:hover .message-display{
+      display:block;
+    }
+
+    /* ================= HEAVY CONTENT SECTION ================= */
+
+    .content-section{
+      background:white;
+      padding:40px;
+      border-radius:18px;
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+      margin-bottom:80px;
+    }
+
+    .content-section h2{
+      font-size:34px;
+      margin-bottom:25px;
+      color:#0f172a;
+    }
+
+    .content-section h3{
+      margin-top:30px;
+      margin-bottom:15px;
+      color:#1e293b;
+    }
+
+    .content-section p{
+      margin-bottom:18px;
+      text-align:justify;
+      color:#374151;
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+
+      margin-top:35px;
+    }
+
+    .content-box{
+      background:#eff6ff;
+      padding:25px;
+      border-radius:12px;
+
+      transition:0.3s;
+    }
+
+    .content-box:hover{
+      transform:scale(1.03);
+    }
+
+    .content-box h4{
+      margin-bottom:12px;
+      color:#1e3a8a;
+    }
+
+    /* ================= FIXED BUTTON ================= */
+
+    .help-btn{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+
+      background:#111827;
+      color:white;
+
+      border:none;
+      padding:15px 22px;
+
+      border-radius:50px;
+
+      cursor:pointer;
+
+      font-size:16px;
+      font-weight:bold;
+
+      box-shadow:0 6px 15px rgba(0,0,0,0.3);
+
+      transition:0.3s;
+    }
+
+    .help-btn:hover{
+      background:#000;
+      transform:scale(1.05);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+    <h1>Notification Card Interface</h1>
+
+    <p>
+      This webpage demonstrates a fully designed Notification Card Interface
+      using HTML and CSS. It includes a sticky header, responsive card layout,
+      hidden hover messages, notification badges, heavy content sections,
+      and a fixed-position help button.
+    </p>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+
+  <div class="main-container">
+
+    <!-- ================= INTRO SECTION ================= -->
+
+    <section class="intro-section">
+
+      <h2>Welcome to the Notification Dashboard</h2>
+
+      <p>
+        Modern web applications frequently use notification systems to keep
+        users informed about updates, alerts, reminders, and messages. A well-
+        designed notification card interface improves user engagement and
+        enhances accessibility by presenting information in a clean and
+        organized structure.
+      </p>
+
+      <p>
+        In this project, we create an advanced notification interface that
+        demonstrates important CSS positioning techniques such as sticky,
+        fixed, absolute, and relative positioning. The layout also highlights
+        hidden elements that appear on hover using both the visibility and
+        display CSS properties.
+      </p>
+
+      <p>
+        The interface is designed with responsiveness and user experience in
+        mind. Cards are displayed horizontally using Flexbox, while hover
+        effects and shadows improve interactivity and visual appeal.
+      </p>
+
+    </section>
+
+    <!-- ================= CARD CONTAINER ================= -->
+
+    <div class="card-container">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <div class="badge">1</div>
+
+        <h3>System Alert</h3>
+
+        <p>
+          Your system security scan has completed successfully. No threats
+          were detected during the latest background scan. Please continue
+          monitoring your account activity for improved security and safety.
+        </p>
+
+        <button>Read More</button>
+
+        <!-- Hidden using visibility -->
+        <div class="message-visibility">
+          New Notification!
+        </div>
+
+        <!-- Hidden using display -->
+        <div class="message-display">
+          New Notification!
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <div class="badge">2</div>
+
+        <h3>New Message</h3>
+
+        <p>
+          You have received a new message from the administration team.
+          The message contains important updates regarding platform policies,
+          scheduled maintenance activities, and feature improvements.
+        </p>
+
+        <button>Open Message</button>
+
+        <!-- Hidden using visibility -->
+        <div class="message-visibility">
+          New Notification!
+        </div>
+
+        <!-- Hidden using display -->
+        <div class="message-display">
+          New Notification!
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <div class="badge">3</div>
+
+        <h3>Meeting Reminder</h3>
+
+        <p>
+          Your upcoming project review meeting is scheduled for tomorrow
+          at 10:00 AM. Please prepare the latest reports, performance
+          analytics, and documentation before joining the meeting.
+        </p>
+
+        <button>View Schedule</button>
+
+        <!-- Hidden using visibility -->
+        <div class="message-visibility">
+          New Notification!
+        </div>
+
+        <!-- Hidden using display -->
+        <div class="message-display">
+          New Notification!
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= HEAVY CONTENT ================= -->
+
+    <section class="content-section">
+
+      <h2>Detailed Information Section</h2>
+
+      <p>
+        This section contains large amounts of content to demonstrate the
+        scrolling behavior of the webpage. The sticky header remains visible
+        at the top while scrolling, ensuring users always have access to
+        navigation and important page information.
+      </p>
+
+      <p>
+        Sticky positioning is commonly used in dashboards, admin panels,
+        learning platforms, and enterprise systems. It improves usability
+        because users do not need to scroll back to the top repeatedly to
+        access menus or controls.
+      </p>
+
+      <p>
+        The notification cards above showcase several important CSS concepts.
+        Absolute positioning is used for badges, fixed positioning is used
+        for the help button, and hidden elements are controlled using
+        visibility and display properties.
+      </p>
+
+      <h3>Why Use Notification Cards?</h3>
+
+      <p>
+        Notification cards organize information into manageable sections.
+        Users can quickly understand alerts without reading long paragraphs.
+        Interactive hover effects also create a modern and engaging
+        experience.
+      </p>
+
+      <p>
+        Cards are widely used in applications such as banking systems,
+        social media platforms, project management tools, e-commerce
+        websites, and educational dashboards.
+      </p>
+
+      <!-- GRID CONTENT -->
+
+      <div class="content-grid">
+
+        <div class="content-box">
+          <h4>User Notifications</h4>
+
+          <p>
+            Notification systems help users stay informed about updates,
+            messages, deadlines, and reminders in real time.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h4>Responsive Layout</h4>
+
+          <p>
+            Flexbox and Grid layouts make the interface adaptable to
+            different screen sizes and devices.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h4>Hover Effects</h4>
+
+          <p>
+            Hover interactions improve user experience by providing visual
+            feedback and hidden content visibility.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h4>Sticky Header</h4>
+
+          <p>
+            Sticky positioning ensures navigation and important information
+            remain accessible during scrolling.
+          </p>
+        </div>
+
+      </div>
+
+      <h3>Additional Content</h3>
+
+      <p>
+        Web developers frequently combine positioning techniques with Flexbox
+        and Grid to create modern interfaces. Positioning elements correctly
+        is important for accessibility, responsiveness, and visual hierarchy.
+      </p>
+
+      <p>
+        The fixed Help button at the bottom-right corner demonstrates another
+        important CSS feature. Fixed elements stay in the same location
+        regardless of scrolling, making them useful for support buttons,
+        navigation menus, and quick actions.
+      </p>
+
+      <p>
+        This project combines multiple CSS concepts into one interface:
+      </p>
+
+      <ul style="margin-left:25px; margin-top:15px;">
+        <li>Sticky Positioning</li>
+        <li>Fixed Positioning</li>
+        <li>Absolute Positioning</li>
+        <li>Visibility Property</li>
+        <li>Display Property</li>
+        <li>Flexbox Layout</li>
+        <li>Responsive Design</li>
+        <li>Hover Effects</li>
+      </ul>
+
+      <p style="margin-top:25px;">
+        By combining these concepts, developers can create professional
+        interfaces that are interactive, responsive, and user-friendly.
+      </p>
+
+    </section>
+
+  </div>
+
+  <!-- ================= FIXED BUTTON ================= -->
+
+  <button class="help-btn">
+    Help
+  </button>
+
+</body>
+</html>
