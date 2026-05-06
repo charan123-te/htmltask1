@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Landing Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      color: white;
+      background: radial-gradient(circle at left, #ff00cc, #333399);
+      background: linear-gradient(120deg, #7b2ff7, #f107a3, #00c6ff);
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00e0ff;
+    }
+
+    .nav-btn {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      background: linear-gradient(45deg, #7b2ff7, #00c6ff);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .hero-btn {
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      background: linear-gradient(45deg, #7b2ff7, #00c6ff);
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      opacity: 0.8;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: linear-gradient(120deg, #7b2ff7, #f107a3, #00c6ff);
+    }
+
+    /* Feature Section */
+    .features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 100px 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 300px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+      background: rgba(0, 255, 255, 0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #ccc;
+      flex-wrap: wrap;
+    }
+
+    .footer-links span {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    .footer-links span:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">🔷 Nova <span>.</span></div>
+    <button class="nav-btn">Get Started</button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Connect in the <br> Speed of Light</h1>
+    <p>
+      A completely revolutionized team messaging platform. 
+      Secure, instantaneous, and designed to look as good as it performs.
+    </p>
+    <button class="hero-btn">Experience Nova</button>
+  </div>
+   <!-- Features Section -->
+  <div class="features">
+
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Real-time Sync</h3>
+      <p>
+        Collaborate with your team instantly across the globe. 
+        Our distributed network ensures messages arrive before you blink.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>End-to-End Encrypted</h3>
+      <p>
+        Your data belongs to you. Military-grade encryption protects 
+        your conversations from prying eyes at every step.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚙️</div>
+      <h3>Custom Workflows</h3>
+      <p>
+        Tailor the platform to your needs. Create automated bots, 
+        integrate tools, and streamline your daily operations seamlessly.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>© 2026 Nova Communications. All rights reserved.</div>
+    <div class="footer-links">
+      <span>Privacy Policy</span>
+      <span>Terms of Service</span>
+      <span>Contact Us</span>
+    </div>
+  </div>
+
+</body>
+</html>
