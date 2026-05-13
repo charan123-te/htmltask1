@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference & Event Site</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: white;
+    }
+
+    
+
+    .navbar {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #00d4ff;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00d4ff;
+    }
+
+    .nav-btn {
+      background: linear-gradient(45deg, #00d4ff, #6c63ff);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+    
+
+.tickets-hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background:
+    url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600')
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 8%;
+  overflow: hidden;
+}
+
+
+.tickets-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(10,15,25,0.85)
+  );
+}
+
+/* CONTENT */
+
+.tickets-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.ticket-tag {
+  display: inline-block;
+  padding: 10px 25px;
+  background: rgba(0,212,255,0.15);
+  border: 1px solid rgba(0,212,255,0.3);
+  color: #00d4ff;
+  border-radius: 30px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.tickets-content h1 {
+  font-size: 75px;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.tickets-content p {
+  color: #d1d5db;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 45px;
+}
+
+
+
+.ticket-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.ticket-hero-btn {
+  text-decoration: none;
+  padding: 16px 38px;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.primary-ticket-btn {
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  color: white;
+}
+
+.primary-ticket-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,212,255,0.3);
+}
+
+.secondary-ticket-btn {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-ticket-btn:hover {
+  background: white;
+  color: black;
+  transform: translateY(-5px);
+}
+
+
+.ticket-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ticket-stat-box {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 25px 40px;
+  border-radius: 20px;
+  min-width: 180px;
+  transition: 0.4s;
+}
+
+.ticket-stat-box:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.12);
+}
+
+.ticket-stat-box h2 {
+  color: #00d4ff;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.ticket-stat-box span {
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+@media(max-width:992px) {
+
+  .tickets-content h1 {
+    font-size: 58px;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .tickets-hero {
+    min-height: 100vh;
+  }
+
+  .tickets-content h1 {
+    font-size: 42px;
+  }
+
+  .tickets-content p {
+    font-size: 16px;
+  }
+
+  .ticket-stat-box {
+    min-width: 140px;
+    padding: 20px 25px;
+  }
+
+  .ticket-stat-box h2 {
+    font-size: 32px;
+  }
+
+}
+.tickets {
+  padding: 100px 8%;
+  background: #111827;
+}
+
+.ticket-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.ticket-card {
+  background: #1b2638;
+  padding: 45px 35px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.ticket-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.25);
+}
+
+.ticket-card h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.ticket-price {
+  font-size: 50px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 30px;
+}
+
+.ticket-features {
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.ticket-features li {
+  margin: 18px 0;
+  color: #cccccc;
+  font-size: 17px;
+}
+
+.ticket-features li i {
+  margin-right: 10px;
+  color: #00d4ff;
+}
+
+.ticket-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 35px;
+  text-decoration: none;
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.ticket-btn:hover {
+  transform: scale(1.05);
+}
+
+.active-ticket {
+  border: 2px solid #00d4ff;
+  transform: scale(1.05);
+}
+
+.popular-tag {
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  background: #00d4ff;
+  color: black;
+  padding: 8px 45px;
+  font-size: 14px;
+  font-weight: 600;
+  transform: rotate(45deg);
+}
+
+
+
+        @media(max-width:768px){}
+
+  .ticket-card {
+    padding: 35px 25px;
+  }
+
+  .ticket-price {
+    font-size: 40px;
+  }
+  
+
+.tickets-footer {
+  background: #05070d;
+  padding-top: 80px;
+}
+
+.tickets-footer-container {
+  padding: 0 8% 60px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* LEFT */
+
+.tickets-footer-left h2 {
+  color: #00d4ff;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.tickets-footer-left p {
+  color: #cccccc;
+  line-height: 1.9;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+
+
+
+.tickets-social {
+  display: flex;
+  gap: 15px;
+}
+
+.tickets-social a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #1b2638;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.tickets-social a:hover {
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  transform: translateY(-6px);
+}
+
+/* LINKS & CONTACT */
+
+.tickets-footer-links h3,
+.tickets-footer-contact h3 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.tickets-footer-links ul {
+  list-style: none;
+}
+
+.tickets-footer-links ul li {
+  margin-bottom: 16px;
+}
+
+.tickets-footer-links ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  transition: 0.3s;
+}
+
+.tickets-footer-links ul li a:hover {
+  color: #00d4ff;
+  padding-left: 5px;
+}
+
+.tickets-footer-contact p {
+  color: #cccccc;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.tickets-footer-contact p i {
+  color: #00d4ff;
+  margin-right: 12px;
+}
+
+
+.tickets-footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  padding: 25px 8%;
+}
+
+.tickets-footer-bottom p {
+  color: #999999;
+  font-size: 15px;
+}
+
+
+@media(max-width:992px) {
+
+  .tickets-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .tickets-footer {
+    text-align: center;
+  }
+
+  .tickets-social {
+    justify-content: center;
+  }
+
+}
+
+
+    </style>
+</head>
+<body>
+
+
+
+  <nav class="navbar">
+
+    <div class="logo">TechEvent</div>
+
+    <ul class="nav-links">
+      <li><a href="day14.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="speakers.html">Speakers</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="#" class="nav-btn">Register</a>
+
+  </nav>
+
+
+<section class="tickets-hero">
+
+  <div class="tickets-overlay"></div>
+
+  <div class="tickets-content">
+
+    <span class="ticket-tag">
+      TECH EVENT 2026
+    </span>
+
+    <h1>
+      Choose Your Perfect <br>
+      Conference Pass
+    </h1>
+
+    <p>
+      Secure your spot for the biggest technology conference
+      featuring live workshops, keynote sessions, networking
+      opportunities and innovation showcases.
+    </p>
+
+    <div class="ticket-hero-buttons">
+
+      <a href="#" class="ticket-hero-btn primary-ticket-btn">
+        Buy Tickets
+      </a>
+
+      <a href="#" class="ticket-hero-btn secondary-ticket-btn">
+        View Schedule
+      </a>
+
+    </div>
+
+    <!-- STATS -->
+
+    <div class="ticket-stats">
+
+      <div class="ticket-stat-box">
+
+        <h2>10K+</h2>
+
+        <span>Attendees</span>
+
+      </div>
+
+      <div class="ticket-stat-box">
+
+        <h2>50+</h2>
+
+        <span>Speakers</span>
+
+      </div>
+
+      <div class="ticket-stat-box">
+
+        <h2>3 Days</h2>
+
+        <span>Conference</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="tickets">
+
+  <div class="section-title">
+    <h2>Choose Your Ticket</h2>
+    <p>
+      Select the perfect pass for the biggest tech conference of the year.
+    </p>
+  </div>
+
+  <div class="ticket-container">
+
+    <!-- BASIC PLAN -->
+
+    <div class="ticket-card">
+
+      <h3>Basic Pass</h3>
+
+      <div class="ticket-price">
+        ₹999
+      </div>
+
+      <ul class="ticket-features">
+        <li><i class="fa-solid fa-check"></i> Access To Main Event</li>
+        <li><i class="fa-solid fa-check"></i> Networking Sessions</li>
+        <li><i class="fa-solid fa-check"></i> Free Event Kit</li>
+        <li><i class="fa-solid fa-xmark"></i> VIP Lounge Access</li>
+      </ul>
+
+      <a href="#" class="ticket-btn">Buy Ticket</a>
+
+    </div>
+
+    <!-- STANDARD PLAN -->
+
+    <div class="ticket-card active-ticket">
+
+      <div class="popular-tag">Most Popular</div>
+
+      <h3>Standard Pass</h3>
+
+      <div class="ticket-price">
+        ₹2499
+      </div>
+
+      <ul class="ticket-features">
+        <li><i class="fa-solid fa-check"></i> Full Event Access</li>
+        <li><i class="fa-solid fa-check"></i> Workshop Sessions</li>
+        <li><i class="fa-solid fa-check"></i> Networking Events</li>
+        <li><i class="fa-solid fa-check"></i> Lunch & Refreshments</li>
+      </ul>
+
+      <a href="#" class="ticket-btn">Buy Ticket</a>
+
+    </div>
+
+    <!-- PREMIUM PLAN -->
+
+    <div class="ticket-card">
+
+      <h3>Premium Pass</h3>
+
+      <div class="ticket-price">
+        ₹4999
+      </div>
+
+      <ul class="ticket-features">
+        <li><i class="fa-solid fa-check"></i> VIP Seating</li>
+        <li><i class="fa-solid fa-check"></i> All Workshop Access</li>
+        <li><i class="fa-solid fa-check"></i> Startup Meetup</li>
+        <li><i class="fa-solid fa-check"></i> Exclusive After Party</li>
+      </ul>
+
+      <a href="#" class="ticket-btn">Buy Ticket</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer class="tickets-footer">
+
+  <div class="tickets-footer-container">
+
+    <!-- LEFT -->
+
+    <div class="tickets-footer-left">
+
+      <h2>TechEvent 2026</h2>
+
+      <p>
+        Join the biggest technology conference with developers,
+        innovators, startups and industry experts from around the world.
+      </p>
+
+      <div class="tickets-social">
+
+        <a href="#">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- CENTER -->
+
+    <div class="tickets-footer-links">
+
+      <h3>Quick Links</h3>
+
+      <ul>
+
+        <li>
+          <a href="#">Home</a>
+        </li>
+
+        <li>
+          <a href="#">About</a>
+        </li>
+
+        <li>
+          <a href="#">Speakers</a>
+        </li>
+
+        <li>
+          <a href="#">Schedule</a>
+        </li>
+
+        <li>
+          <a href="#">Tickets</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="tickets-footer-contact">
+
+      <h3>Contact Info</h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Hyderabad, India
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 98765 43210
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        info@techevent.com
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="tickets-footer-bottom">
+
+    <p>
+      © 2026 TechEvent. All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+</body>

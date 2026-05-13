@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference & Event Site</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: white;
+    }
+
+  
+
+    .navbar {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      color: #00d4ff;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00d4ff;
+    }
+
+    .nav-btn {
+      background: linear-gradient(45deg, #00d4ff, #6c63ff);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+    
+
+.hero {
+  min-height: 100vh;
+  padding: 120px 8% 80px;
+  background: linear-gradient(to right, #0d1117, #111827);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  align-items: center;
+}
+
+
+.hero-left h4 {
+  color: #00d4ff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 {
+  font-size: 75px;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.hero-left h1 span {
+  color: #00d4ff;
+}
+
+.hero-left p {
+  color: #cccccc;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+  max-width: 650px;
+}
+
+
+
+.hero-info {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1b2638;
+  padding: 18px 25px;
+  border-radius: 18px;
+  transition: 0.4s;
+}
+
+.info-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,212,255,0.2);
+}
+
+.info-box i {
+  color: #00d4ff;
+  font-size: 30px;
+}
+
+.info-box h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.info-box span {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 16px 38px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  color: white;
+}
+
+.primary-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,212,255,0.3);
+}
+
+.secondary-btn {
+  border: 2px solid #00d4ff;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #00d4ff;
+  transform: translateY(-5px);
+}
+
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-card img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+.hero-small-card {
+  position: absolute;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px 28px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.hero-small-card:hover {
+  transform: scale(1.05);
+}
+
+.hero-small-card i {
+  font-size: 32px;
+  color: #00d4ff;
+  margin-bottom: 12px;
+}
+
+.hero-small-card h3 {
+  font-size: 18px;
+}
+
+.top-card {
+  top: 20px;
+  left: -30px;
+}
+
+.bottom-card {
+  bottom: 20px;
+  right: -30px;
+}
+
+
+
+@keyframes floatImage {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+
+
+@media(max-width:992px) {
+
+  .hero-left h1 {
+    font-size: 55px;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .hero {
+    text-align: center;
+    padding-top: 150px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .top-card,
+  .bottom-card {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .hero-right {
+    flex-direction: column;
+  }
+
+}
+
+
+.schedule {
+  padding: 100px 8%;
+  background: #0f1724;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #cccccc;
+  font-size: 18px;
+}
+
+.schedule-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+
+.schedule-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 25px;
+  background: #1b2638;
+  padding: 30px;
+  border-radius: 25px;
+  transition: 0.4s;
+  border: 1px solid transparent;
+}
+
+.schedule-item:hover {
+  transform: translateY(-8px);
+  border-color: #00d4ff;
+  box-shadow: 0 12px 30px rgba(0,212,255,0.15);
+}
+
+.active-schedule {
+  border-color: #00d4ff;
+}
+
+.schedule-time {
+  min-width: 130px;
+  text-align: center;
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  padding: 20px;
+  border-radius: 18px;
+  height: fit-content;
+}
+
+.schedule-time h3 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.schedule-time span {
+  color: white;
+  font-size: 15px;
+}
+
+.schedule-content {
+  flex: 1;
+}
+
+.schedule-tag {
+  display: inline-block;
+  background: rgba(0,212,255,0.15);
+  color: #00d4ff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.schedule-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.schedule-content p {
+  color: #cccccc;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.schedule-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.schedule-user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.schedule-user h4 {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.schedule-user span {
+  color: #00d4ff;
+  font-size: 14px;
+}
+
+
+.schedule-right {
+  position: sticky;
+  top: 120px;
+}
+
+.schedule-image img {
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.schedule-box {
+  background: #1b2638;
+  padding: 35px;
+  border-radius: 25px;
+}
+
+.schedule-box h3 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.schedule-box p {
+  color: #cccccc;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.schedule-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schedule-stats h2 {
+  color: #00d4ff;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.schedule-stats span {
+  color: #cccccc;
+}
+
+
+
+@media(max-width:992px) {
+
+  .schedule-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-right {
+    position: static;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .schedule-item {
+    flex-direction: column;
+  }
+
+  .schedule-time {
+    width: 100%;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .schedule-content h3 {
+    font-size: 24px;
+  }
+
+  .schedule-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+.footer {
+  background: #05070d;
+  padding-top: 90px;
+}
+
+.footer-container {
+  padding: 0 8% 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 50px;
+}
+
+
+
+.footer-box h2,
+.footer-box h3 {
+  color: #00d4ff;
+  margin-bottom: 25px;
+}
+
+.footer-box p {
+  color: #cccccc;
+  line-height: 1.9;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+
+
+.footer-box ul {
+  list-style: none;
+}
+
+.footer-box ul li {
+  margin-bottom: 16px;
+  color: #cccccc;
+  transition: 0.3s;
+}
+
+.footer-box ul li:hover {
+  transform: translateX(6px);
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: #00d4ff;
+}
+
+
+.footer-box ul li i,
+.footer-box p i {
+  color: #00d4ff;
+  margin-right: 10px;
+}
+
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.footer-social a {
+  width: 45px;
+  height: 45px;
+  background: #1b2638;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.footer-social a:hover {
+  background: linear-gradient(45deg, #00d4ff, #6c63ff);
+  transform: translateY(-6px);
+}
+
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  padding: 25px 8%;
+}
+
+.footer-bottom p {
+  color: #cccccc;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+
+
+@media(max-width:768px) {
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+}
+    </style>
+</head>
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">TechEvent</div>
+
+    <ul class="nav-links">
+      <li><a href="day14.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="speakers.html">Speakers</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <a href="#" class="nav-btn">Register</a>
+
+  </nav>
+
+
+<section class="hero">
+
+  <div class="hero-left">
+
+    <h4>TECH CONFERENCE 2026</h4>
+
+    <h1>
+      Innovate, Connect & <span>Shape The Future</span>
+    </h1>
+
+    <p>
+      Join thousands of developers, entrepreneurs, startups and
+      technology leaders for the biggest innovation and networking
+      conference of the year.
+    </p>
+
+    <div class="hero-info">
+
+      <div class="info-box">
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <div>
+          <h3>15-17 AUGUST</h3>
+          <span>3 Days Event</span>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <i class="fa-solid fa-location-dot"></i>
+
+        <div>
+          <h3>HYDERABAD</h3>
+          <span>Convention Center</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-buttons">
+
+      <a href="#" class="hero-btn primary-btn">
+        Get Tickets
+      </a>
+
+      <a href="#" class="hero-btn secondary-btn">
+        Explore More
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+
+  <div class="hero-right">
+
+    <div class="hero-image-card main-card">
+      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200"
+        alt="">
+    </div>
+
+    <div class="hero-small-card top-card">
+      <i class="fa-solid fa-microchip"></i>
+      <h3>50+ Speakers</h3>
+    </div>
+
+    <div class="hero-small-card bottom-card">
+      <i class="fa-solid fa-users"></i>
+      <h3>10K+ Attendees</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="schedule">
+
+  <div class="section-title">
+    <h2>Conference Schedule</h2>
+    <p>
+      Explore keynote sessions, workshops and networking events.
+    </p>
+  </div>
+
+  <div class="schedule-wrapper">
+
+
+    <div class="schedule-left">
+
+      <!-- ITEM 1 -->
+
+      <div class="schedule-item active-schedule">
+
+        <div class="schedule-time">
+          <h3>09:00 AM</h3>
+          <span>Day 01</span>
+        </div>
+
+        <div class="schedule-content">
+
+          <span class="schedule-tag">Keynote</span>
+
+          <h3>Future Of Artificial Intelligence</h3>
+
+          <p>
+            Discover the future of AI, machine learning and
+            next-generation innovation with industry leaders.
+          </p>
+
+          <div class="schedule-user">
+
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=500"
+              alt="">
+
+            <div>
+              <h4>John Anderson</h4>
+              <span>AI Specialist</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ITEM 2 -->
+
+      <div class="schedule-item">
+
+        <div class="schedule-time">
+          <h3>11:30 AM</h3>
+          <span>Day 01</span>
+        </div>
+
+        <div class="schedule-content">
+
+          <span class="schedule-tag">Workshop</span>
+
+          <h3>Modern Frontend Development</h3>
+
+          <p>
+            Learn React, animations, responsive layouts and
+            modern UI/UX techniques for scalable websites.
+          </p>
+
+          <div class="schedule-user">
+
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500"
+              alt="">
+
+            <div>
+              <h4>Sarah Williams</h4>
+              <span>Frontend Developer</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ITEM 3 -->
+
+      <div class="schedule-item">
+
+        <div class="schedule-time">
+          <h3>02:00 PM</h3>
+          <span>Day 02</span>
+        </div>
+
+        <div class="schedule-content">
+
+          <span class="schedule-tag">Security</span>
+
+          <h3>Cyber Security & Cloud Protection</h3>
+
+          <p>
+            Understand advanced security systems and
+            cloud infrastructure protection methods.
+          </p>
+
+          <div class="schedule-user">
+
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500"
+              alt="">
+
+            <div>
+              <h4>Michael Lee</h4>
+              <span>Security Expert</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="schedule-right">
+
+      <div class="schedule-image">
+
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
+          alt="Conference">
+
+      </div>
+
+      <div class="schedule-box">
+
+        <h3>TechEvent 2026</h3>
+
+        <p>
+          3 days of innovation, networking and live workshops
+          with the world's leading technology experts.
+        </p>
+
+        <div class="schedule-stats">
+
+          <div>
+            <h2>50+</h2>
+            <span>Speakers</span>
+          </div>
+
+          <div>
+            <h2>10K+</h2>
+            <span>Attendees</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- FOOTER ABOUT -->
+
+    <div class="footer-box">
+
+      <h2>TechEvent</h2>
+
+      <p>
+        TechEvent 2026 is the biggest technology and innovation
+        conference bringing together developers, startups,
+        designers and tech leaders from around the world.
+      </p>
+
+      <div class="footer-social">
+
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-box">
+
+      <h3>Quick Links</h3>
+
+      <ul>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> About</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Speakers</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Schedule</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Tickets</a></li>
+
+        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="footer-box">
+
+      <h3>Event Highlights</h3>
+
+      <ul>
+
+        <li><i class="fa-solid fa-check"></i> AI & Innovation</li>
+
+        <li><i class="fa-solid fa-check"></i> Startup Pitch</li>
+
+        <li><i class="fa-solid fa-check"></i> Networking Sessions</li>
+
+        <li><i class="fa-solid fa-check"></i> Cloud Computing</li>
+
+        <li><i class="fa-solid fa-check"></i> Cyber Security</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="footer-box">
+
+      <h3>Contact Info</h3>
+
+      <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Hyderabad Convention Center, India
+      </p>
+
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 98765 43210
+      </p>
+
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        info@techevent.com
+      </p>
+
+      <p>
+        <i class="fa-solid fa-clock"></i>
+        Mon - Sat : 9AM - 7PM
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 TechEvent | All Rights Reserved | Designed For Technology Conference
+    </p>
+
+  </div>
+
+</footer>
+
+</section>
+</body>     
