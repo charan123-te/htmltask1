@@ -1,0 +1,3299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reddy Transport Navbar</title>
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+      background: #ffb400;
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    /* LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffb400;
+    }
+
+    /* NAV LINKS */
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: #ffb400;
+      transition: 0.4s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: #ffb400;
+    }
+
+    /* ICONS */
+
+    .icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icons i {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .icons i:hover {
+      color: #ffb400;
+      transform: translateY(-3px);
+    }
+
+    /* BUTTON */
+
+    .contact-btn {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 30px;
+      background: #ffb400;
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .contact-btn:hover {
+      background: white;
+      transform: scale(1.05);
+    }
+
+    /* MOBILE MENU */
+
+    .menu-bar {
+      display: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* MEDIA QUERY */
+
+    @media(max-width: 992px) {
+
+      .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .menu-bar {
+        display: none;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .icons {
+        justify-content: center;
+      }
+
+      .contact-btn {
+        width: 100%;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+      overflow-x: hidden;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1501706362039-c6e13b4c7b69?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 8%;
+    }
+
+    .hero-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* LEFT CONTENT */
+
+    .hero-content {
+      flex: 1;
+      color: white;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .hero-content h3 {
+      color: #ffb400;
+      font-size: 22px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+      font-size: 65px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 17px;
+      line-height: 30px;
+      margin-bottom: 35px;
+      color: #ddd;
+    }
+
+    /* BUTTONS */
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 35px;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .btn1 {
+      background: #ffb400;
+      color: black;
+    }
+
+    .btn1:hover {
+      background: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 180, 0, 0.4);
+    }
+
+    .btn2 {
+      background: transparent;
+      color: white;
+      border: 2px solid #ffb400;
+    }
+
+    .btn2:hover {
+      background: #ffb400;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* RIGHT IMAGE */
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+      animation: floatTruck 4s ease-in-out infinite;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 650px;
+      filter: drop-shadow(0 10px 25px rgba(255, 180, 0, 0.4));
+      transition: 0.5s;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FEATURE BOXES */
+
+    .features {
+      display: flex;
+      gap: 25px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: 0.4s;
+      width: 180px;
+      text-align: center;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      background: #ffb400;
+      color: black;
+    }
+
+    .feature-box i {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes floatTruck {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* MEDIA QUERIES */
+
+    @media(max-width: 1100px) {
+
+      .hero-content h1 {
+        font-size: 50px;
+      }
+
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .features {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .hero {
+        padding: 100px 5%;
+      }
+
+      .hero-content h1 {
+        font-size: 38px;
+      }
+
+      .hero-content p {
+        font-size: 15px;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+      }
+
+      .feature-box {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .hero-content h1 {
+        font-size: 30px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+    /* ABOUT SECTION */
+
+    .about {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+      overflow: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* IMAGE */
+
+    .about-image {
+      flex: 1;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 10px 30px rgba(255, 180, 0, 0.2);
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTENT */
+
+    .about-content {
+      flex: 1;
+      color: white;
+      animation: slideRight 1.5s ease;
+    }
+
+    .about-content h4 {
+      color: #ffb400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .about-content h1 {
+      font-size: 50px;
+      line-height: 1.3;
+      margin-bottom: 25px;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      line-height: 30px;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    /* FEATURES */
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .feature-box:hover {
+      background: #ffb400;
+      transform: translateY(-8px);
+      color: black;
+    }
+
+    .feature-box i {
+      font-size: 30px;
+      color: #ffb400;
+      transition: 0.4s;
+    }
+
+    .feature-box:hover i {
+      color: black;
+    }
+
+    .feature-box h3 {
+      font-size: 18px;
+    }
+
+    /* BUTTON */
+
+    .about-btn {
+      margin-top: 35px;
+      padding: 14px 35px;
+      border: none;
+      border-radius: 40px;
+      background: #ffb400;
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .about-btn:hover {
+      background: white;
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 180, 0, 0.3);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* MEDIA QUERIES */
+
+    @media(max-width: 992px) {
+
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-content {
+        text-align: center;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .about {
+        padding: 80px 5%;
+      }
+
+      .about-content h1 {
+        font-size: 38px;
+      }
+
+      .about-content p {
+        font-size: 15px;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-box {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .about-content h1 {
+        font-size: 30px;
+      }
+
+      .about-btn {
+        width: 100%;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+    /* ABOUT SECTION */
+
+    .about {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+      overflow: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* IMAGE */
+
+    .about-image {
+      flex: 1;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 20px;
+      transition: 0.5s;
+      box-shadow: 0 10px 30px rgba(255, 180, 0, 0.2);
+    }
+
+    .about-image img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CONTENT */
+
+    .about-content {
+      flex: 1;
+      color: white;
+      animation: slideRight 1.5s ease;
+    }
+
+    .about-content h4 {
+      color: #ffb400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .about-content h1 {
+      font-size: 50px;
+      line-height: 1.3;
+      margin-bottom: 25px;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      line-height: 30px;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    /* FEATURES */
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .feature-box:hover {
+      background: #ffb400;
+      transform: translateY(-8px);
+      color: black;
+    }
+
+    .feature-box i {
+      font-size: 30px;
+      color: #ffb400;
+      transition: 0.4s;
+    }
+
+    .feature-box:hover i {
+      color: black;
+    }
+
+    .feature-box h3 {
+      font-size: 18px;
+    }
+
+    /* BUTTON */
+
+    .about-btn {
+      margin-top: 35px;
+      padding: 14px 35px;
+      border: none;
+      border-radius: 40px;
+      background: #ffb400;
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .about-btn:hover {
+      background: white;
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 180, 0, 0.3);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* MEDIA QUERIES */
+
+    @media(max-width: 992px) {
+
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-content {
+        text-align: center;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .about {
+        padding: 80px 5%;
+      }
+
+      .about-content h1 {
+        font-size: 38px;
+      }
+
+      .about-content p {
+        font-size: 15px;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-box {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .about-content h1 {
+        font-size: 30px;
+      }
+
+      .about-btn {
+        width: 100%;
+      }
+    }
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+      overflow-x: hidden;
+    }
+
+
+    .home {
+      width: 100%;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1501706362039-c6e13b4c7b69?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 8%;
+    }
+
+    .home-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* LEFT CONTENT */
+
+    .home-content {
+      flex: 1;
+      color: white;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .home-content h4 {
+      color: #ffb400;
+      font-size: 22px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .home-content h1 {
+      font-size: 65px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .home-content p {
+      font-size: 17px;
+      line-height: 30px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 35px;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .btn1 {
+      background: #ffb400;
+      color: black;
+    }
+
+    .btn1:hover {
+      background: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 180, 0, 0.3);
+    }
+
+    .btn2 {
+      background: transparent;
+      border: 2px solid #ffb400;
+      color: white;
+    }
+
+    .btn2:hover {
+      background: #ffb400;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    /* RIGHT IMAGE */
+
+    .home-image {
+      flex: 1;
+      text-align: center;
+      animation: floatTruck 4s ease-in-out infinite;
+    }
+
+    .home-image img {
+      width: 100%;
+      max-width: 650px;
+      transition: 0.5s;
+    }
+
+    .home-image img:hover {
+      transform: scale(1.05);
+    }
+
+
+    .services {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .section-title h2 {
+      color: #ffb400;
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    /* SERVICE CARDS */
+
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-box {
+      background: #222;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+      transition: 0.5s;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .service-box:hover {
+      background: #ffb400;
+      color: black;
+      transform: translateY(-10px);
+    }
+
+    .service-box i {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #ffb400;
+      transition: 0.5s;
+    }
+
+    .service-box:hover i {
+      color: black;
+      transform: rotateY(360deg);
+    }
+
+    .service-box h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .service-box p {
+      line-height: 28px;
+      font-size: 15px;
+    }
+
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatTruck {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+
+    @media(max-width: 1100px) {
+
+      .home-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .service-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .home {
+        padding: 100px 5%;
+      }
+
+      .home-content h1 {
+        font-size: 42px;
+      }
+
+      .home-content p {
+        font-size: 15px;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+      }
+
+      .service-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .home-content h1 {
+        font-size: 32px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .service-box {
+        padding: 30px 20px;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+
+    .tracking {
+      width: 100%;
+      min-height: 100vh;
+      padding: 100px 8%;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1565891741441-64926e441838?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tracking-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* LEFT CONTENT */
+
+    .tracking-content {
+      flex: 1;
+      color: white;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .tracking-content h4 {
+      color: #ffb400;
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .tracking-content h1 {
+      font-size: 60px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
+    .tracking-content p {
+      font-size: 16px;
+      line-height: 30px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    /* TRACKING FORM */
+
+    .tracking-form {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .tracking-form input {
+      flex: 1;
+      min-width: 250px;
+      padding: 18px;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .tracking-form button {
+      padding: 18px 35px;
+      border: none;
+      border-radius: 50px;
+      background: #ffb400;
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .tracking-form button:hover {
+      background: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 180, 0, 0.3);
+    }
+
+    /* TRACK INFO */
+
+    .tracking-info {
+      display: flex;
+      gap: 25px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 20px;
+      width: 200px;
+      text-align: center;
+      transition: 0.5s;
+    }
+
+    .info-box:hover {
+      background: #ffb400;
+      transform: translateY(-10px);
+      color: black;
+    }
+
+    .info-box i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #ffb400;
+      transition: 0.4s;
+    }
+
+    .info-box:hover i {
+      color: black;
+      transform: rotateY(360deg);
+    }
+
+    .info-box h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    /* RIGHT IMAGE */
+
+    .tracking-image {
+      flex: 1;
+      text-align: center;
+      animation: floatTruck 4s ease-in-out infinite;
+    }
+
+    .tracking-image img {
+      width: 100%;
+      max-width: 600px;
+      transition: 0.5s;
+      filter: drop-shadow(0 10px 30px rgba(255, 180, 0, 0.3));
+    }
+
+    .tracking-image img:hover {
+      transform: scale(1.05);
+    }
+
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes floatTruck {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+
+    @media(max-width: 1100px) {
+
+      .tracking-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .tracking-form {
+        justify-content: center;
+      }
+
+      .tracking-info {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .tracking {
+        padding: 80px 5%;
+      }
+
+      .tracking-content h1 {
+        font-size: 40px;
+      }
+
+      .tracking-content p {
+        font-size: 15px;
+      }
+
+      .tracking-form input {
+        width: 100%;
+      }
+
+      .tracking-form button {
+        width: 100%;
+      }
+
+      .info-box {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .tracking-content h1 {
+        font-size: 30px;
+      }
+
+      .tracking-content h4 {
+        font-size: 18px;
+      }
+    }
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+
+    .fleet {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+      overflow: hidden;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .section-title h4 {
+      color: #ffb400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .section-title h1 {
+      color: white;
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    /* FLEET CONTAINER */
+
+    .fleet-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /* CARD */
+
+    .fleet-card {
+      background: #222;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.5s;
+      animation: fadeUp 1.5s ease;
+      position: relative;
+    }
+
+    .fleet-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(255, 180, 0, 0.3);
+    }
+
+    /* IMAGE */
+
+    .fleet-image {
+      overflow: hidden;
+    }
+
+    .fleet-image img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .fleet-card:hover .fleet-image img {
+      transform: scale(1.1);
+    }
+
+    /* CONTENT */
+
+    .fleet-content {
+      padding: 25px;
+      color: white;
+    }
+
+    .fleet-content h2 {
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .fleet-content p {
+      color: #ccc;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    /* FEATURES */
+
+    .fleet-features {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .fleet-features span {
+      background: rgba(255, 180, 0, 0.1);
+      padding: 8px 14px;
+      border-radius: 30px;
+      color: #ffb400;
+      font-size: 14px;
+    }
+
+    /* BUTTON */
+
+    .fleet-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 40px;
+      background: #ffb400;
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .fleet-btn:hover {
+      background: white;
+      transform: scale(1.03);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @media(max-width: 1100px) {
+
+      .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .fleet {
+        padding: 80px 5%;
+      }
+
+      .section-title h1 {
+        font-size: 38px;
+      }
+
+      .fleet-container {
+        grid-template-columns: 1fr;
+      }
+
+      .fleet-image img {
+        height: 230px;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .section-title h1 {
+        font-size: 30px;
+      }
+
+      .fleet-content h2 {
+        font-size: 24px;
+      }
+
+      .fleet-btn {
+        font-size: 15px;
+      }
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+
+    .contact {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+    }
+
+    .contact-title {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .contact-title h4 {
+      color: #ffb400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .contact-title h1 {
+      color: white;
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .contact-title p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    /* CONTAINER */
+
+    .contact-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* LEFT SIDE */
+
+    .contact-info {
+      flex: 1;
+      animation: slideLeft 1.5s ease;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      background: #222;
+      padding: 25px;
+      border-radius: 20px;
+      transition: 0.4s;
+    }
+
+    .info-box:hover {
+      transform: translateY(-8px);
+      background: #ffb400;
+    }
+
+    .info-box i {
+      font-size: 35px;
+      color: #ffb400;
+      transition: 0.4s;
+    }
+
+    .info-box:hover i {
+      color: black;
+      transform: rotateY(360deg);
+    }
+
+    .info-text h3 {
+      color: white;
+      margin-bottom: 8px;
+      transition: 0.4s;
+    }
+
+    .info-text p {
+      color: #ccc;
+      transition: 0.4s;
+    }
+
+    .info-box:hover h3,
+    .info-box:hover p {
+      color: black;
+    }
+
+    /* RIGHT SIDE */
+
+    .contact-form {
+      flex: 1;
+      background: #222;
+      padding: 40px;
+      border-radius: 25px;
+      animation: slideRight 1.5s ease;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 16px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      background: #333;
+      color: white;
+      font-size: 15px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 150px;
+    }
+
+    .contact-form button {
+      padding: 15px;
+      border: none;
+      border-radius: 40px;
+      background: #ffb400;
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .contact-form button:hover {
+      background: white;
+      transform: scale(1.03);
+    }
+
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+    }
+
+    /* ================= CLIENT SECTION ================= */
+
+    .clients {
+      width: 100%;
+      padding: 100px 8%;
+      background: #181818;
+      overflow: hidden;
+    }
+
+    /* TITLE */
+
+    .client-title {
+      text-align: center;
+      margin-bottom: 70px;
+
+      animation: fadeUp 1.5s ease;
+    }
+
+    .client-title h4 {
+      color: #ffb400;
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .client-title h1 {
+      color: white;
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .client-title p {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 30px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* CLIENT GRID */
+
+    .client-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    /* CLIENT CARD */
+
+    .client-card {
+      background: #222;
+      padding: 35px;
+      border-radius: 25px;
+
+      transition: 0.5s;
+      position: relative;
+
+      animation: fadeUp 1.5s ease;
+    }
+
+    .client-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(255, 180, 0, 0.3);
+    }
+
+    /* TOP */
+
+    .client-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .client-top img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffb400;
+      transition: 0.5s;
+    }
+
+    .client-card:hover .client-top img {
+      transform: scale(1.1);
+    }
+
+    .client-info h2 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .client-info span {
+      color: #ffb400;
+      font-size: 15px;
+    }
+
+    /* REVIEW */
+
+    .client-review {
+      color: #ccc;
+      line-height: 30px;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    /* STARS */
+
+    .stars {
+      display: flex;
+      gap: 8px;
+    }
+
+    .stars i {
+      color: #ffb400;
+      font-size: 18px;
+    }
+
+    /* QUOTE ICON */
+
+    .quote-icon {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+
+      font-size: 40px;
+      color: rgba(255, 180, 0, 0.15);
+    }
+
+
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @media(max-width: 1100px) {
+
+      .client-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .clients {
+        padding: 80px 5%;
+      }
+
+      .client-title h1 {
+        font-size: 40px;
+      }
+
+      .client-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .client-title h1 {
+        font-size: 32px;
+      }
+
+      .client-card {
+        padding: 25px;
+      }
+
+      .client-top {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .client-review {
+        text-align: center;
+      }
+
+      .stars {
+        justify-content: center;
+      }
+    }
+
+
+
+    footer {
+      background: #000;
+      padding: 70px 8% 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-box h2 {
+      color: #ffb400;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .footer-box p {
+      color: #ccc;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+
+    .footer-box ul {
+      list-style: none;
+    }
+
+    .footer-box ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-box ul li a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.4s;
+    }
+
+    .footer-box ul li a:hover {
+      color: #ffb400;
+      padding-left: 8px;
+    }
+
+    /* SOCIAL ICONS */
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icons i {
+      width: 45px;
+      height: 45px;
+      background: #222;
+      color: #ffb400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .social-icons i:hover {
+      background: #ffb400;
+      color: black;
+      transform: translateY(-5px);
+    }
+
+    /* COPYRIGHT */
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      color: #aaa;
+      font-size: 15px;
+    }
+
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    @media(max-width: 1100px) {
+
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      .contact {
+        padding: 80px 5%;
+      }
+
+      .contact-title h1 {
+        font-size: 38px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .map iframe {
+        height: 300px;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .contact-title h1 {
+        font-size: 30px;
+      }
+
+      .contact-form {
+        padding: 25px;
+      }
+
+      .info-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+   
+
+@media screen and (max-width:1200px) {
+
+  .navbar {
+    width: 95%;
+  }
+
+  .hero-content h1,
+  .home-content h1,
+  .tracking-content h1 {
+    font-size: 52px;
+  }
+
+  .about-content h1,
+  .section-title h1,
+  .contact-title h1,
+  .client-title h1 {
+    font-size: 45px;
+  }
+
+  .fleet-container,
+  .client-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+
+@media screen and (max-width:992px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .hero-container,
+  .about-container,
+  .home-container,
+  .tracking-container,
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons,
+  .buttons,
+  .tracking-form,
+  .tracking-info,
+  .features {
+    justify-content: center;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-content h1,
+  .home-content h1,
+  .tracking-content h1 {
+    font-size: 45px;
+  }
+
+  .about-content h1,
+  .section-title h1,
+  .contact-title h1,
+  .client-title h1 {
+    font-size: 40px;
+  }
+
+  .service-container,
+  .fleet-container,
+  .client-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-image img,
+  .home-image img,
+  .tracking-image img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+@media screen and (max-width:768px) {
+
+  .top-bar {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+
+  .hero,
+  .home,
+  .tracking,
+  .about,
+  .services,
+  .fleet,
+  .clients,
+  .contact {
+    padding: 80px 5%;
+  }
+
+  .hero-content h1,
+  .home-content h1,
+  .tracking-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  .about-content h1,
+  .section-title h1,
+  .contact-title h1,
+  .client-title h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p,
+  .home-content p,
+  .tracking-content p,
+  .about-content p,
+  .client-title p,
+  .section-title p {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .btn,
+  .tracking-form button {
+    width: 100%;
+  }
+
+  .tracking-form input {
+    width: 100%;
+  }
+
+  .feature-box,
+  .info-box {
+    width: 100%;
+  }
+
+  .about-features,
+  .service-container,
+  .fleet-container,
+  .client-container,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fleet-image img {
+    height: 230px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .client-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .client-review {
+    text-align: center;
+  }
+
+  .stars {
+    justify-content: center;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+}
+
+
+
+
+@media screen and (max-width:480px) {
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero-content h1,
+  .home-content h1,
+  .tracking-content h1 {
+    font-size: 28px;
+  }
+
+  .about-content h1,
+  .section-title h1,
+  .contact-title h1,
+  .client-title h1 {
+    font-size: 28px;
+  }
+
+  .hero-content h3,
+  .home-content h4,
+  .tracking-content h4,
+  .about-content h4 {
+    font-size: 16px;
+  }
+
+  .hero-content p,
+  .home-content p,
+  .tracking-content p,
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .btn,
+  .about-btn,
+  .fleet-btn,
+  .contact-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .service-box,
+  .fleet-card,
+  .client-card {
+    padding: 20px;
+  }
+
+  .fleet-content h2,
+  .client-info h2 {
+    font-size: 22px;
+  }
+
+  .footer-box h2 {
+    font-size: 22px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+    🚚 Fast & Safe Transport Services Across India 🚚
+  </div>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <nav class="navbar">
+
+      <!-- LOGO -->
+
+      <div class="logo">
+        <img src="ChatGPT Image May 15, 2026, 11_19_49 AM.png" alt="Reddy Transport Logo">
+        <span>REDDY TRANSPORT</span>
+      </div>
+      
+
+      <!-- NAV LINKS -->
+
+      <ul class="nav-links">
+        <li><a href="transport.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="fleet.html">Fleet</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- ICONS -->
+
+      <div class="icons">
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+
+      <!-- BUTTON -->
+
+      <button class="contact-btn">
+        Get Quote
+      </button>
+
+      <!-- MENU -->
+
+      <div class="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+    </nav>
+
+  </header>
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-container">
+
+      <!-- LEFT CONTENT -->
+
+      <div class="hero-content">
+
+        <h3>FAST & SAFE TRANSPORT SERVICES</h3>
+
+        <h1>
+          Reliable Logistics <br>
+          & Transport Solutions
+        </h1>
+
+        <p>
+          Reddy Transport provides fast, secure and affordable logistics
+          services across India. We ensure on-time delivery with
+          professional transport solutions for businesses and individuals.
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="hero-buttons">
+
+          <button class="btn btn1">
+            Get Started
+          </button>
+
+          <button class="btn btn2">
+            Track Order
+          </button>
+
+        </div>
+
+        <!-- FEATURES -->
+
+        <div class="features">
+
+          <div class="feature-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h4>Fast Delivery</h4>
+          </div>
+
+          <div class="feature-box">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h4>Safe Transport</h4>
+          </div>
+
+          <div class="feature-box">
+            <i class="fa-solid fa-headset"></i>
+            <h4>24/7 Support</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+
+      <div class="hero-image">
+
+        <img
+          src="lorry.jfif"
+          alt="Transport Truck">
+
+      </div>
+
+    </div>
+
+  </section>
+  
+  <section class="about">
+
+    <div class="about-container">
+
+      <!-- IMAGE -->
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop"
+          alt="Transport Image">
+
+      </div>
+
+      <!-- CONTENT -->
+
+      <div class="about-content">
+
+        <h4>ABOUT REDDY TRANSPORT</h4>
+
+        <h1>
+          Trusted Logistics & <br>
+          Transport Solutions
+        </h1>
+
+        <p>
+          Reddy Transport provides fast, safe and reliable logistics
+          services across India. We focus on timely deliveries,
+          secure cargo handling and customer satisfaction with
+          professional transport management.
+        </p>
+
+        <p>
+          Our modern fleet, experienced drivers and advanced
+          logistics systems help businesses transport goods
+          efficiently and safely.
+        </p>
+
+        <!-- FEATURES -->
+
+        <div class="about-features">
+
+          <div class="feature-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+          </div>
+
+          <div class="feature-box">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Safe Transport</h3>
+          </div>
+
+          <div class="feature-box">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+          </div>
+
+          <div class="feature-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>All India Service</h3>
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button class="about-btn">
+          Read More
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section class="home">
+
+    <div class="home-container">
+
+      <!-- LEFT CONTENT -->
+
+      <div class="home-content">
+
+        <h4>FAST & SAFE TRANSPORT SERVICES</h4>
+
+        <h1>
+          Trusted Logistics <br>
+          Across India
+        </h1>
+
+        <p>
+          Reddy Transport provides reliable logistics and transport
+          services with secure cargo handling, fast delivery and
+          professional transport management for businesses and individuals.
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+          <button class="btn btn1">
+            Get Started
+          </button>
+
+          <button class="btn btn2">
+            Track Shipment
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+
+      <div class="home-image">
+
+        <img
+          src="l1.jpeg"
+          alt="Truck Image">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="services">
+
+    <!-- TITLE -->
+
+    <div class="section-title">
+
+      <h2>Our Services</h2>
+
+      <p>
+        Professional and secure transport solutions for your business
+      </p>
+
+    </div>
+
+    <!-- SERVICE CARDS -->
+
+    <div class="service-container">
+
+      <!-- CARD 1 -->
+
+      <div class="service-box">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <h3>Fast Delivery</h3>
+
+        <p>
+          Quick and safe transport services across all major
+          cities in India with guaranteed delivery.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="service-box">
+
+        <i class="fa-solid fa-box"></i>
+
+        <h3>Cargo Service</h3>
+
+        <p>
+          Secure cargo handling and parcel transportation
+          with advanced tracking systems.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="service-box">
+
+        <i class="fa-solid fa-warehouse"></i>
+
+        <h3>Warehouse</h3>
+
+        <p>
+          Modern warehouse and storage facilities for
+          safe and organized logistics management.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+<section class="tracking">
+
+    <div class="tracking-container">
+
+      <!-- LEFT CONTENT -->
+
+      <div class="tracking-content">
+
+        <h4>LIVE SHIPMENT TRACKING</h4>
+
+        <h1>
+          Track Your <br>
+          Shipment Easily
+        </h1>
+
+        <p>
+          Reddy Transport provides real-time shipment tracking
+          services to help customers monitor cargo movement
+          securely and efficiently across India.
+        </p>
+
+        <!-- TRACKING FORM -->
+
+        <div class="tracking-form">
+
+          <input
+            type="text"
+            placeholder="Enter Tracking ID">
+
+          <button>
+            Track Now
+          </button>
+
+        </div>
+
+        <!-- TRACK INFO -->
+
+        <div class="tracking-info">
+
+          <div class="info-box">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Live Location</h3>
+
+            <p>Real-time shipment updates</p>
+
+          </div>
+
+          <div class="info-box">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>On Time</h3>
+
+            <p>Fast & secure delivery</p>
+
+          </div>
+
+          <div class="info-box">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Safe Cargo</h3>
+
+            <p>Protected transport systems</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+
+      <div class="tracking-image">
+
+        <img
+          src="l2.jpeg"
+          alt="Truck">
+
+      </div>
+
+    </div>
+
+  </section>
+   <section class="fleet">
+
+    <!-- SECTION TITLE -->
+
+    <div class="section-title">
+
+      <h4>OUR TRANSPORT VEHICLES</h4>
+
+      <h1>Modern Fleet Solutions</h1>
+
+      <p>
+        Reliable and powerful transport vehicles for secure logistics
+        and cargo delivery services across India.
+      </p>
+
+    </div>
+
+    <!-- FLEET CONTAINER -->
+
+    <div class="fleet-container">
+
+      <!-- CARD 1 -->
+
+      <div class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop"
+            alt="Truck">
+
+        </div>
+
+        <div class="fleet-content">
+
+          <h2>Heavy Cargo Truck</h2>
+
+          <p>
+            Large-capacity cargo trucks for industrial and
+            long-distance transportation services.
+          </p>
+
+          <div class="fleet-features">
+
+            <span>GPS Tracking</span>
+            <span>24/7 Service</span>
+            <span>Safe Delivery</span>
+
+          </div>
+
+          <button class="fleet-btn">
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop"
+            alt="Transport">
+
+        </div>
+
+        <div class="fleet-content">
+
+          <h2>Container Transport</h2>
+
+          <p>
+            Secure container logistics solutions for safe
+            transportation of valuable goods.
+          </p>
+
+          <div class="fleet-features">
+
+            <span>Fast Transport</span>
+            <span>Secure Cargo</span>
+            <span>Insurance</span>
+
+          </div>
+
+          <button class="fleet-btn">
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop"
+            alt="Logistics">
+
+        </div>
+
+        <div class="fleet-content">
+
+          <h2>Logistics Truck</h2>
+
+          <p>
+            Smart logistics and delivery trucks with advanced
+            safety and transport systems.
+          </p>
+
+          <div class="fleet-features">
+
+            <span>Modern Fleet</span>
+            <span>Nationwide</span>
+            <span>Reliable</span>
+
+          </div>
+
+          <button class="fleet-btn">
+            View Details
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+<section class="contact">
+
+    <!-- TITLE -->
+
+    <div class="contact-title">
+
+      <h4>CONTACT US</h4>
+
+      <h1>Get In Touch</h1>
+
+      <p>
+        Contact Reddy Transport for safe and reliable logistics services
+      </p>
+
+    </div>
+
+    <!-- CONTACT CONTAINER -->
+
+    <div class="contact-container">
+
+      <!-- LEFT INFO -->
+
+      <div class="contact-info">
+
+        <div class="info-box">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <div class="info-text">
+
+            <h3>Office Address</h3>
+
+            <p>proddatur</p>, Andhra Pradesh, India</p>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <div class="info-text">
+
+            <h3>Phone Number</h3>
+
+            <p>+91 9876543210</p>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <div class="info-text">
+
+            <h3>Email Address</h3>
+
+            <p>reddytransport@gmail.com</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+
+      <div class="contact-form">
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Your Name">
+
+          <input
+            type="email"
+            placeholder="Your Email">
+
+          <input
+            type="text"
+            placeholder="Subject">
+
+          <textarea
+            placeholder="Write Your Message"></textarea>
+
+          <button>
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+<section class="clients">
+
+    <!-- TITLE -->
+
+    <div class="client-title">
+
+      <h4>OUR CLIENTS</h4>
+
+      <h1>
+        What Our Clients <br>
+        Say About Us
+      </h1>
+
+      <p>
+        Reddy Transport provides trusted logistics
+        and transport services with safe delivery,
+        live tracking and customer satisfaction.
+      </p>
+
+    </div>
+
+    <!-- CLIENT CARDS -->
+
+    <div class="client-container">
+
+      <!-- CARD 1 -->
+
+      <div class="client-card">
+
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+
+        <div class="client-top">
+
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Client">
+
+          <div class="client-info">
+
+            <h2>Ramesh Kumar</h2>
+
+            <span>Business Owner</span>
+
+          </div>
+
+        </div>
+
+        <p class="client-review">
+          Excellent transport services with fast
+          delivery and live tracking support.
+          Highly recommended for logistics needs.
+        </p>
+
+        <div class="stars">
+
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="client-card">
+
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+
+        <div class="client-top">
+
+          <img
+            src="https://randomuser.me/api/portraits/women/45.jpg"
+            alt="Client">
+
+          <div class="client-info">
+
+            <h2>Priya Sharma</h2>
+
+            <span>Logistics Manager</span>
+
+          </div>
+
+        </div>
+
+        <p class="client-review">
+          Professional team with secure cargo
+          management and timely transportation
+          services across multiple cities.
+        </p>
+
+        <div class="stars">
+
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="client-card">
+
+        <i class="fa-solid fa-quote-right quote-icon"></i>
+
+        <div class="client-top">
+
+          <img
+            src="https://randomuser.me/api/portraits/men/60.jpg"
+            alt="Client">
+
+          <div class="client-info">
+
+            <h2>Arjun Reddy</h2>
+
+            <span>Warehouse Head</span>
+
+          </div>
+
+        </div>
+
+        <p class="client-review">
+          Reliable and affordable logistics company
+          with modern trucks and excellent customer
+          support services.
+        </p>
+
+        <div class="stars">
+
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+    
+
+  <footer>
+
+    <div class="footer-container">
+
+      <!-- BOX 1 -->
+
+      <div class="footer-box">
+
+        <h2>Reddy Transport</h2>
+
+        <p>
+          Trusted logistics and transport company providing
+          secure cargo and delivery services across India.
+        </p>
+
+        <!-- SOCIAL ICONS -->
+
+        <div class="social-icons">
+
+          <i class="fa-brands fa-facebook-f"></i>
+
+          <i class="fa-brands fa-instagram"></i>
+
+          <i class="fa-brands fa-twitter"></i>
+
+          <i class="fa-brands fa-linkedin-in"></i>
+
+        </div>
+
+      </div>
+
+      <!-- BOX 2 -->
+
+      <div class="footer-box">
+
+        <h2>Quick Links</h2>
+
+        <ul>
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Tracking</a></li>
+          <li><a href="#">Fleet</a></li>
+          <li><a href="#">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- BOX 3 -->
+
+      <div class="footer-box">
+
+        <h2>Services</h2>
+
+        <ul>
+
+          <li><a href="#">Cargo Delivery</a></li>
+          <li><a href="#">Warehouse</a></li>
+          <li><a href="#">Logistics</a></li>
+          <li><a href="#">Transport</a></li>
+          <li><a href="#">Tracking</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- BOX 4 -->
+
+      <div class="footer-box">
+
+        <h2>Newsletter</h2>
+
+        <p>
+          Subscribe for latest updates and transport news.
+        </p>
+
+        <div class="contact-form">
+
+          <form>
+
+            <input
+              type="email"
+              placeholder="Enter Your Email">
+
+            <button>
+              Subscribe
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="copyright">
+
+      © 2026 Reddy Transport | All Rights Reserved
+
+    </div>
+
+  </footer>
+
+
+
+
+</body>
+
+</html>

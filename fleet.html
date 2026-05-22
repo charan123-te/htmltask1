@@ -242,16 +242,15 @@
       overflow-x: hidden;
     }
 
-    
 
-    .contact-hero {
+    .fleet-hero {
       width: 100%;
       min-height: 100vh;
 
       background:
         linear-gradient(rgba(0, 0, 0, 0.75),
           rgba(0, 0, 0, 0.75)),
-        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop');
+        url('https://images.unsplash.com/photo-1501706362039-c6e13b4c7b69?q=80&w=1600&auto=format&fit=crop');
 
       background-position: center;
       background-size: cover;
@@ -263,7 +262,7 @@
       padding: 100px 8%;
     }
 
-    .contact-container {
+    .fleet-container {
       width: 100%;
 
       display: flex;
@@ -273,27 +272,27 @@
     }
 
 
-    .contact-content {
+    .fleet-content {
       flex: 1;
       color: white;
 
       animation: slideLeft 1.5s ease;
     }
 
-    .contact-content h4 {
+    .fleet-content h4 {
       color: #ffb400;
       font-size: 22px;
       letter-spacing: 2px;
       margin-bottom: 15px;
     }
 
-    .contact-content h1 {
+    .fleet-content h1 {
       font-size: 68px;
       line-height: 1.2;
       margin-bottom: 25px;
     }
 
-    .contact-content p {
+    .fleet-content p {
       font-size: 17px;
       line-height: 32px;
       color: #ddd;
@@ -303,7 +302,7 @@
 
     /* BUTTONS */
 
-    .contact-buttons {
+    .fleet-buttons {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
@@ -345,66 +344,63 @@
       transform: scale(1.05);
     }
 
-    /* CONTACT INFO */
+    /* FEATURES */
 
-    .contact-info {
+    .fleet-features {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
 
-    .info-box {
+    .feature-box {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
 
-      padding: 18px 25px;
+      padding: 18px 22px;
       border-radius: 15px;
 
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
 
       transition: 0.4s;
     }
 
-    .info-box:hover {
+    .feature-box:hover {
       background: #ffb400;
+      color: black;
       transform: translateY(-8px);
     }
 
-    .info-box i {
+    .feature-box i {
       color: #ffb400;
       font-size: 24px;
       transition: 0.4s;
     }
 
-    .info-box:hover i {
+    .feature-box:hover i {
       color: black;
       transform: rotateY(360deg);
     }
 
-    .info-box span {
-      font-size: 15px;
-    }
 
-
-    .contact-image {
+    .fleet-image {
       flex: 1;
       text-align: center;
 
-      animation: floatImage 4s ease-in-out infinite;
+      animation: floatTruck 4s ease-in-out infinite;
     }
 
-    .contact-image img {
+    .fleet-image img {
       width: 100%;
-      max-width: 700px;
+      max-width: 750px;
 
       filter: drop-shadow(0 10px 30px rgba(255, 180, 0, 0.3));
 
       transition: 0.5s;
     }
 
-    .contact-image img:hover {
+    .fleet-image img:hover {
       transform: scale(1.05);
     }
 
@@ -421,7 +417,7 @@
       }
     }
 
-    @keyframes floatImage {
+    @keyframes floatTruck {
 
       0%,
       100% {
@@ -433,36 +429,35 @@
       }
     }
 
-    
 
     @media(max-width: 1100px) {
 
-      .contact-container {
+      .fleet-container {
         flex-direction: column;
         text-align: center;
       }
 
-      .contact-content p {
+      .fleet-content p {
         margin: auto auto 35px;
       }
 
-      .contact-buttons,
-      .contact-info {
+      .fleet-buttons,
+      .fleet-features {
         justify-content: center;
       }
     }
 
     @media(max-width: 768px) {
 
-      .contact-hero {
+      .fleet-hero {
         padding: 100px 5%;
       }
 
-      .contact-content h1 {
+      .fleet-content h1 {
         font-size: 45px;
       }
 
-      .contact-content p {
+      .fleet-content p {
         font-size: 15px;
         line-height: 28px;
       }
@@ -470,11 +465,11 @@
 
     @media(max-width: 480px) {
 
-      .contact-content h1 {
+      .fleet-content h1 {
         font-size: 34px;
       }
 
-      .contact-content h4 {
+      .fleet-content h4 {
         font-size: 18px;
       }
 
@@ -482,12 +477,12 @@
         width: 100%;
       }
 
-      .info-box {
+      .feature-box {
         width: 100%;
         justify-content: center;
       }
     }
-    * {
+     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -499,34 +494,36 @@
     }
 
 
-    .contact {
+    .fleet {
       width: 100%;
       padding: 100px 8%;
       background: #181818;
       overflow: hidden;
     }
 
-    .contact-title {
+    /* TITLE */
+
+    .fleet-title {
       text-align: center;
       margin-bottom: 70px;
 
       animation: fadeUp 1.5s ease;
     }
 
-    .contact-title h4 {
+    .fleet-title h4 {
       color: #ffb400;
       font-size: 20px;
       letter-spacing: 2px;
       margin-bottom: 15px;
     }
 
-    .contact-title h1 {
+    .fleet-title h1 {
       color: white;
       font-size: 55px;
       margin-bottom: 20px;
     }
 
-    .contact-title p {
+    .fleet-title p {
       color: #ccc;
       font-size: 16px;
       line-height: 30px;
@@ -534,206 +531,107 @@
       margin: auto;
     }
 
-    /* CONTAINER */
+    /* GRID */
 
-    .contact-container {
+    .fleet-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    /* CARD */
+
+    .fleet-card {
+      background: #222;
+      border-radius: 25px;
+      overflow: hidden;
+      transition: 0.5s;
+      position: relative;
+
+      animation: fadeUp 1.5s ease;
+    }
+
+    .fleet-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(255, 180, 0, 0.3);
+    }
+
+    /* IMAGE */
+
+    .fleet-image {
+      overflow: hidden;
+    }
+
+    .fleet-image img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .fleet-card:hover .fleet-image img {
+      transform: scale(1.1);
+    }
+
+    /* CONTENT */
+
+    .fleet-content {
+      padding: 30px;
+    }
+
+    .fleet-content h2 {
+      color: white;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .fleet-content p {
+      color: #ccc;
+      line-height: 28px;
+      margin-bottom: 25px;
+    }
+
+    /* INFO */
+
+    .fleet-info {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 50px;
-    }
-
-    /* LEFT SIDE */
-
-    .contact-info {
-      flex: 1;
-
-      animation: slideLeft 1.5s ease;
-    }
-
-    .info-box {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-
-      background: #222;
-      padding: 25px;
-      border-radius: 20px;
-
       margin-bottom: 25px;
-      transition: 0.4s;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .info-box:hover {
-      transform: translateY(-8px);
-      background: #ffb400;
-    }
-
-    .info-box i {
-      width: 60px;
-      height: 60px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background: rgba(255, 180, 0, 0.1);
+    .fleet-info span {
       color: #ffb400;
-
-      border-radius: 50%;
-      font-size: 24px;
-      transition: 0.4s;
-    }
-
-    .info-box:hover i {
-      background: white;
-      color: black;
-      transform: rotateY(360deg);
-    }
-
-    .info-text h3 {
-      color: white;
-      margin-bottom: 8px;
-      transition: 0.4s;
-    }
-
-    .info-text p {
-      color: #ccc;
-      transition: 0.4s;
-    }
-
-    .info-box:hover h3,
-    .info-box:hover p {
-      color: black;
-    }
-
-    /* RIGHT SIDE FORM */
-
-    .contact-form {
-      flex: 1;
-      background: #222;
-      padding: 40px;
-      border-radius: 25px;
-
-      animation: slideRight 1.5s ease;
-    }
-
-    .contact-form h2 {
-      color: white;
-      font-size: 35px;
-      margin-bottom: 25px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 16px;
-
-      margin-bottom: 20px;
-
-      border: none;
-      outline: none;
-      border-radius: 12px;
-
-      background: #333;
-      color: white;
       font-size: 15px;
+      font-weight: 500;
     }
 
-    .contact-form textarea {
-      resize: none;
-      height: 150px;
+    .fleet-info i {
+      margin-right: 8px;
     }
 
-    .contact-form button {
-      width: 100%;
-      padding: 16px;
+    /* BUTTON */
 
+    .fleet-btn {
+      padding: 14px 30px;
       border: none;
       border-radius: 50px;
 
       background: #ffb400;
       color: black;
 
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
 
       cursor: pointer;
       transition: 0.4s;
     }
 
-    .contact-form button:hover {
+    .fleet-btn:hover {
       background: white;
       transform: translateY(-5px);
     }
-    .map-section {
-  width: 100%;
-  padding: 100px 8%;
-  background: #111;
-}
-
-.map-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.map-title h4 {
-  color: #ffb400;
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.map-title h1 {
-  color: white;
-  font-size: 50px;
-  margin-bottom: 15px;
-}
-
-.map-title p {
-  color: #ccc;
-  font-size: 16px;
-}
-
-.map-container {
-  width: 100%;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(255, 180, 0, 0.2);
-}
-
-.map-container iframe {
-  width: 100%;
-  border-radius: 25px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px) {
-
-  .map-section {
-    padding: 80px 5%;
-  }
-
-  .map-title h1 {
-    font-size: 38px;
-  }
-
-  .map-container iframe {
-    height: 300px;
-  }
-}
-
-@media(max-width:480px) {
-
-  .map-title h1 {
-    font-size: 30px;
-  }
-
-  .map-title p {
-    font-size: 14px;
-  }
-}
 
 
     footer {
@@ -747,6 +645,35 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 40px;
       margin-bottom: 50px;
+    }
+
+    .footer-box {
+      animation: fadeUp 1.5s ease;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid #ffb400;
+    }
+
+    .footer-logo h2 {
+      color: #ffb400;
+      font-size: 28px;
+    }
+
+    .footer-box p {
+      color: #ccc;
+      line-height: 30px;
+      margin-bottom: 20px;
     }
 
     .footer-box h3 {
@@ -764,30 +691,6 @@
       width: 60px;
       height: 3px;
       background: #ffb400;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .footer-logo img {
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      border: 2px solid #ffb400;
-    }
-
-    .footer-logo h2 {
-      color: #ffb400;
-      font-size: 28px;
-    }
-
-    .footer-box p {
-      color: #ccc;
-      line-height: 30px;
     }
 
     /* LINKS */
@@ -811,12 +714,12 @@
       padding-left: 8px;
     }
 
-    /* SOCIAL ICONS */
+    /* SOCIAL */
 
     .social-icons {
       display: flex;
       gap: 15px;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     .social-icons i {
@@ -831,14 +734,32 @@
       color: #ffb400;
 
       border-radius: 50%;
-      cursor: pointer;
       transition: 0.4s;
+      cursor: pointer;
     }
 
     .social-icons i:hover {
       background: #ffb400;
       color: black;
       transform: translateY(-6px);
+    }
+
+    /* CONTACT */
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+
+    .contact-info i {
+      color: #ffb400;
+      font-size: 18px;
+    }
+
+    .contact-info span {
+      color: #ccc;
     }
 
     /* COPYRIGHT */
@@ -848,6 +769,7 @@
       padding-top: 20px;
       text-align: center;
       color: #aaa;
+      font-size: 15px;
     }
 
     .copyright span {
@@ -868,35 +790,11 @@
       }
     }
 
-    @keyframes slideLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-100px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes slideRight {
-      from {
-        opacity: 0;
-        transform: translateX(100px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
 
     @media(max-width: 1100px) {
 
-      .contact-container {
-        flex-direction: column;
+      .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .footer-container {
@@ -906,15 +804,16 @@
 
     @media(max-width: 768px) {
 
-      .contact,
+      .fleet,
       footer {
         padding: 80px 5%;
       }
 
-      .contact-title h1 {
+      .fleet-title h1 {
         font-size: 40px;
       }
 
+      .fleet-container,
       .footer-container {
         grid-template-columns: 1fr;
       }
@@ -922,28 +821,23 @@
 
     @media(max-width: 480px) {
 
-      .contact-title h1 {
+      .fleet-title h1 {
         font-size: 32px;
       }
 
-      .contact-form {
-        padding: 25px;
+      .fleet-content h2 {
+        font-size: 24px;
       }
 
-      .contact-form h2 {
-        font-size: 28px;
-      }
-
-      .info-box {
-        flex-direction: column;
-        text-align: center;
+      .footer-logo h2 {
+        font-size: 22px;
       }
     }
-    </style>
-    <body>
-  <!-- TOP BAR -->
 
-  <div class="top-bar">
+</style>
+</head>
+<body>
+    <div class="top-bar">
     🚚 Fast & Safe Transport Services Across India 🚚
   </div>
 
@@ -994,66 +888,67 @@
     </nav>
 
   </header>
-   <section class="contact-hero">
+  <section class="fleet-hero">
 
-    <div class="contact-container">
+    <div class="fleet-container">
 
       <!-- LEFT CONTENT -->
 
-      <div class="contact-content">
+      <div class="fleet-content">
 
-        <h4>CONTACT REDDY TRANSPORT</h4>
+        <h4>MODERN TRANSPORT FLEET</h4>
 
         <h1>
-          Get In Touch <br>
-          With Our Team
+          Powerful Fleet For <br>
+          Fast Logistics
         </h1>
 
         <p>
-          Contact Reddy Transport for reliable logistics,
-          cargo delivery and fleet management services.
-          Our support team is available 24/7 to help you.
+          Reddy Transport provides modern fleet management
+          solutions with high-performance trucks, secure
+          cargo handling and reliable delivery services
+          across India.
         </p>
 
         <!-- BUTTONS -->
 
-        <div class="contact-buttons">
+        <div class="fleet-buttons">
 
           <button class="btn btn1">
-            Contact Now
+            Explore Fleet
           </button>
 
           <button class="btn btn2">
-            Get Quote
+            Contact Us
           </button>
 
         </div>
 
-        <!-- CONTACT INFO -->
+        <!-- FEATURES -->
 
-        <div class="contact-info">
+        <div class="fleet-features">
 
-          <div class="info-box">
+          <div class="feature-box">
 
-            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-truck-fast"></i>
 
-            <span>+91 9876543210</span>
-
-          </div>
-
-          <div class="info-box">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <span>reddytransport@gmail.com</span>
+            <span>Heavy Trucks</span>
 
           </div>
 
-          <div class="info-box">
+          <div class="feature-box">
 
             <i class="fa-solid fa-location-dot"></i>
 
-            <span>Vijayawada, AP</span>
+            <span>GPS Tracking</span>
+
+          </div>
+
+          <div class="feature-box">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Safe Delivery</span>
 
           </div>
 
@@ -1063,147 +958,172 @@
 
       <!-- RIGHT IMAGE -->
 
-      <div class="contact-image">
+      <div class="fleet-image">
 
         <img
-          src="l2.jpeg"
-          alt="Truck Image">
+          src="l6.jpeg"
+          alt="Fleet Truck">
 
       </div>
 
     </div>
 
   </section>
-   <section class="contact">
+  <section class="fleet">
 
-    <div class="contact-title">
+    <div class="fleet-title">
 
-      <h4>CONTACT US</h4>
+      <h4>OUR FLEET</h4>
 
       <h1>
-        Get In Touch <br>
-        With Reddy Transport
+        Modern Trucks & <br>
+        Logistics Vehicles
       </h1>
 
       <p>
-        Contact our logistics team for transport,
-        cargo delivery and fleet management services.
+        Reddy Transport provides powerful and modern
+        fleet services with safe cargo transportation
+        and advanced logistics support.
       </p>
 
     </div>
 
-    <div class="contact-container">
+    <!-- FLEET CARDS -->
 
-      <!-- LEFT INFO -->
+    <div class="fleet-container">
 
-      <div class="contact-info">
+      <!-- CARD 1 -->
 
-        <div class="info-box">
+      <div class="fleet-card">
 
-          <i class="fa-solid fa-location-dot"></i>
+        <div class="fleet-image">
 
-          <div class="info-text">
-
-            <h3>Our Location</h3>
-
-            <p>Vijayawada, Andhra Pradesh</p>
-
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop"
+            alt="Truck">
 
         </div>
 
-        <div class="info-box">
+        <div class="fleet-content">
 
-          <i class="fa-solid fa-phone"></i>
+          <h2>Heavy Truck</h2>
 
-          <div class="info-text">
+          <p>
+            Powerful heavy trucks for long-distance
+            cargo and industrial transport services.
+          </p>
 
-            <h3>Phone Number</h3>
+          <div class="fleet-info">
 
-            <p>+91 9876543210</p>
+            <span>
+              <i class="fa-solid fa-gas-pump"></i>
+              Diesel
+            </span>
 
-          </div>
-
-        </div>
-
-        <div class="info-box">
-
-          <i class="fa-solid fa-envelope"></i>
-
-          <div class="info-text">
-
-            <h3>Email Address</h3>
-
-            <p>reddytransport@gmail.com</p>
+            <span>
+              <i class="fa-solid fa-road"></i>
+              24/7 Service
+            </span>
 
           </div>
+
+          <button class="fleet-btn">
+            View Details
+          </button>
 
         </div>
 
       </div>
 
-      <!-- RIGHT FORM -->
+      <!-- CARD 2 -->
 
-      <div class="contact-form">
+      <div class="fleet-card">
 
-        <h2>Send Message</h2>
+        <div class="fleet-image">
 
-        <form>
+          <img
+            src="l7.jpeg"
+            alt="Truck">
 
-          <input
-            type="text"
-            placeholder="Your Name">
+        </div>
 
-          <input
-            type="email"
-            placeholder="Your Email">
+        <div class="fleet-content">
 
-          <input
-            type="text"
-            placeholder="Subject">
+          <h2>Container Truck</h2>
 
-          <textarea
-            placeholder="Write Your Message"></textarea>
+          <p>
+            Secure container transport for logistics,
+            cargo delivery and warehouse support.
+          </p>
 
-          <button>
-            Send Message
+          <div class="fleet-info">
+
+            <span>
+              <i class="fa-solid fa-box"></i>
+              Cargo
+            </span>
+
+            <span>
+              <i class="fa-solid fa-location-dot"></i>
+              GPS Tracking
+            </span>
+
+          </div>
+
+          <button class="fleet-btn">
+            View Details
           </button>
 
-        </form>
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="fleet-card">
+
+        <div class="fleet-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop"
+            alt="Truck">
+
+        </div>
+
+        <div class="fleet-content">
+
+          <h2>Logistics Truck</h2>
+
+          <p>
+            Fast and reliable logistics transportation
+            with safe delivery management solutions.
+          </p>
+
+          <div class="fleet-info">
+
+            <span>
+              <i class="fa-solid fa-truck-fast"></i>
+              Fast Delivery
+            </span>
+
+            <span>
+              <i class="fa-solid fa-shield-halved"></i>
+              Safe Cargo
+            </span>
+
+          </div>
+
+          <button class="fleet-btn">
+            View Details
+          </button>
+
+        </div>
 
       </div>
 
     </div>
 
   </section>
-  <section class="map-section">
-
-  <div class="map-title">
-
-    <h4>OUR LOCATION</h4>
-
-    <h1>Find Us On Map</h1>
-
-    <p>
-      Visit Reddy Transport Office at Proddatur, Andhra Pradesh
-    </p>
-
-  </div>
-
-  <div class="map-container">
-
-    <iframe
-      src="https://www.google.com/maps?q=Proddatur,Andhra+Pradesh&output=embed"
-      width="100%"
-      height="450"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-
-  </div>
-
-</section>
 
 
   <footer>
@@ -1225,9 +1145,8 @@
         </div>
 
         <p>
-          Reliable transport and logistics company
-          providing safe and fast delivery services
-          across India.
+          Professional logistics and transport company
+          delivering safe and fast cargo services.
         </p>
 
         <div class="social-icons">
@@ -1268,9 +1187,9 @@
         <ul class="footer-links">
 
           <li><a href="#">Cargo Delivery</a></li>
+          <li><a href="#">Warehouse</a></li>
           <li><a href="#">Fleet Management</a></li>
           <li><a href="#">Tracking</a></li>
-          <li><a href="#">Warehouse</a></li>
           <li><a href="#">Logistics</a></li>
 
         </ul>
@@ -1283,9 +1202,29 @@
 
         <h3>Contact Info</h3>
 
-        <p>📍 Vijayawada, Andhra Pradesh</p>
-        <p>📞 +91 9876543210</p>
-        <p>✉️ reddytransport@gmail.com</p>
+        <div class="contact-info">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span>Vijayawada, Andhra Pradesh</span>
+
+        </div>
+
+        <div class="contact-info">
+
+          <i class="fa-solid fa-phone"></i>
+
+          <span>+91 9876543210</span>
+
+        </div>
+
+        <div class="contact-info">
+
+          <i class="fa-solid fa-envelope"></i>
+
+          <span>reddytransport@gmail.com</span>
+
+        </div>
 
       </div>
 
@@ -1301,5 +1240,4 @@
     </div>
 
   </footer>
-
-    </body>
+</body>
