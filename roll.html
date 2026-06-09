@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        let students = ["Ravi", "Priya", "Kiran", "Anu"];
+        for (let i = 0; i <= 3; i++) {
+            document.write("Attendance Marked for" + "" + students[i] + "<br>");
+        }
+    </script>
+
+
+    <!-- Task 2: Online Shopping Products -->
+    <script>
+        let products = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+        for (let product of products) {
+            document.write("Available Product" + ":" + products[product] + "<br>");
+        } 
+    </script>
+
+
+    <!-- Task 3: Employee Welcome Messages -->
+    <script>
+        let employees = ["John", "David", "Sara"];
+        for (let employee in employees) {
+            document.write("Welcome" + employees[employee] + "<br>");
+        }
+    </script>
+
+
+    <!-- Task 4: Movie Ticket Booking -->
+    <script>
+        let tickets = prompt("Enter the number of tickets");
+        document.write("<h2>Movie Tickets</h2>");
+        for (let i = 1; i <= 10; i++) {
+            document.write("Seat" + i + " Booked" + "<br>");
+        }
+    </script>
+
+
+    <!-- Task 5: Food Delivery Orders -->
+    <script>
+        let orders = ["Order101", "Order102", "Order103"];
+        let i = 0;
+        while (i <= 2) {
+            document.write("Delivering" + orders[i] + "<br>");
+            i++;
+        }
+    </script>
+
+
+    <!-- Task 6: Mobile Contacts -->
+    <script>
+        let contacts = ["Rahul", "Priya", "Arjun", "Neha"];
+        let n = 0;
+        do {
+            document.write("Calling" + contacts[n] + "<br>");
+            n++;
+        } while (n <= 3);
+    </script>
+
+
+    <!-- Task 7: WhatsApp Broadcast -->
+    <script>
+        let users = ["Ravi", "Kiran", "Anu"];
+        for (let user in users) {
+            document.write("Message Sent to" + users[user] + "<br>");
+        }
+    </script>
+
+
+    <!-- Task 8: YouTube Playlist -->
+    <script>
+        let videos = ["HTML Basics", "CSS Basics", "JavaScript Basics"];
+        for (let video in videos) {
+            document.write("Now Playing" + ":" + videos[video] + "<br>");
+        }
+    </script>
+
+    <!-- Task 9: ATM Withdrawal System -->
+    <script>
+        let balance = 1000;
+        while (balance > 0) {
+            document.write("Balance" + ":" + balance + "<br>");
+            balance -= 200;
+        }
+    </script>
+
+
+    <!-- Task 10: Bus Journey Tracker -->
+    <script>
+        let stops = prompt("Enter the number of stops");
+        document.write("<h2>Bus stops </h2>");
+        for (let i = 1; i <= 5; i++) {
+            document.write("Reached Stop" + i + "<br>");
+        }
+    </script>
+
+
+    <!-- Task 11: Student Result Processing -->
+    <script>
+        let student = ["Ravi", "Priya", "Kiran", "Anu"];
+        for (i = 0; i <= 3; i++) {
+            document.write("Checking Result for" + student[i] + "<br>");
+        }
+        document.write("All Results Published Successfully.." + "<br>");
+    </script>
+
+
+    <!-- Task 12: Roll Number Classification -->
+    <script>
+        for (let i = 1; i <= 20 ; i++){
+            if (i % 2 === 0) {
+                document.write("Student" + i + "Even Roll Number"+ "<br>");
+            } else {
+                document.write("Student" + i + "Odd Roll Number" + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>
