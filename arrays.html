@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Dataset 1: Movies
+
+const movies = [
+  { id: 1, title: "Bahubali", rating: 9 },
+  { id: 2, title: "Pushpa", rating: 8 },
+  { id: 3, title: "RRR", rating: 10 },
+  { id: 4, title: "Salaar", rating: 7 }
+];
+
+const movieTitles = movies.map(movie => movie.title);
+console.log("1.", movieTitles);
+
+const movieRatings = movies.map(movie => movie.rating);
+console.log("2.", movieRatings);
+
+const increasedRatings = movies.map(movie => ({
+  ...movie,
+  rating: movie.rating + 1
+}));
+console.log("3.", increasedRatings);
+
+const ratingGreaterThan8 = movies.filter(movie => movie.rating > 8);
+console.log("4.", ratingGreaterThan8);
+
+const ratingLessThan9 = movies.filter(movie => movie.rating < 9);
+console.log("5.", ratingLessThan9);
+
+const movieId3 = movies.find(movie => movie.id === 3);
+console.log("6.", movieId3);
+
+const pushpaMovie = movies.find(movie => movie.title === "Pushpa");
+console.log("7.", pushpaMovie);
+
+const totalMovieRatings = movies.reduce((sum, movie) => sum + movie.rating, 0);
+console.log("8.", totalMovieRatings);
+
+
+// Dataset 2: Products
+
+const products = [
+  { id: 1, name: "Laptop", price: 50000 },
+  { id: 2, name: "Mouse", price: 500 },
+  { id: 3, name: "Keyboard", price: 1500 },
+  { id: 4, name: "Monitor", price: 12000 }
+];
+
+const productNames = products.map(product => product.name);
+console.log("9.", productNames);
+
+const productPrices = products.map(product => product.price);
+console.log("10.", productPrices);
+
+const increasedPrices = products.map(product => ({
+  ...product,
+  price: product.price + 1000
+}));
+console.log("11.", increasedPrices);
+
+const productsAbove1000 = products.filter(product => product.price > 1000);
+console.log("12.", productsAbove1000);
+
+const productsBelow10000 = products.filter(product => product.price < 10000);
+console.log("13.", productsBelow10000);
+
+const productId2 = products.find(product => product.id === 2);
+console.log("14.", productId2);
+
+const monitorProduct = products.find(product => product.name === "Monitor");
+console.log("15.", monitorProduct);
+
+// 16
+const totalProductCost = products.reduce((sum, product) => sum + product.price, 0);
+console.log("16.", totalProductCost);
+
+
+// Dataset 3: Cricket Scores
+
+const scores = [45, 80, 20, 100, 60];
+
+const add10Runs = scores.map(score => score + 10);
+console.log("17.", add10Runs);
+
+const add5Runs = scores.map(score => score + 5);
+console.log("18.", add5Runs);
+
+const scoresAbove50 = scores.filter(score => score > 50);
+console.log("19.", scoresAbove50);
+
+const scoresAboveOrEqual80 = scores.filter(score => score >= 80);
+console.log("20.", scoresAboveOrEqual80);
+
+const firstScoreAbove70 = scores.find(score => score > 70);
+console.log("21.", firstScoreAbove70);
+
+const score100 = scores.find(score => score === 100);
+console.log("22.", score100);
+
+const totalRuns = scores.reduce((sum, score) => sum + score, 0);
+console.log("23.", totalRuns);
+
+const averageScore = totalRuns / scores.length;
+console.log("24.", averageScore);
+
+
+// Dataset 4: Students
+
+const students = [
+  { name: "Ravi", marks: 90 },
+  { name: "Priya", marks: 75 },
+  { name: "Rahul", marks: 40 },
+  { name: "Anu", marks: 95 }
+];
+
+const studentNames = students.map(student => student.name);
+console.log("25.", studentNames);
+
+const studentMarks = students.map(student => student.marks);
+console.log("26.", studentMarks);
+
+const increasedMarks = students.map(student => ({
+  ...student,
+  marks: student.marks + 5
+}));
+console.log("27.", increasedMarks);
+
+const studentsAbove80 = students.filter(student => student.marks > 80);
+console.log("28.", studentsAbove80);
+
+const studentsBelow50 = students.filter(student => student.marks < 50);
+console.log("29.", studentsBelow50);
+
+const rahulStudent = students.find(student => student.name === "Rahul");
+console.log("30.", rahulStudent);
+
+const firstStudentAbove90 = students.find(student => student.marks > 90);
+console.log("31.", firstStudentAbove90);
+
+const totalMarks = students.reduce((sum, student) => sum + student.marks, 0);
+console.log("32.", totalMarks);
+
+
+// Dataset 5: Food Orders
+
+const foodOrders = [
+  { item: "Pizza", price: 300 },
+  { item: "Burger", price: 150 },
+  { item: "Biryani", price: 250 },
+  { item: "Ice Cream", price: 100 }
+];
+
+const foodNames = foodOrders.map(food => food.item);
+console.log("33.", foodNames);
+
+const foodPrices = foodOrders.map(food => food.price);
+console.log("34.", foodPrices);
+
+const increasedFoodPrices = foodOrders.map(food => ({
+  ...food,
+  price: food.price + 50
+}));
+console.log("35.", increasedFoodPrices);
+
+const foodAbove200 = foodOrders.filter(food => food.price > 200);
+console.log("36.", foodAbove200);
+
+const foodBelow250 = foodOrders.filter(food => food.price < 250);
+console.log("37.", foodBelow250);
+
+const biryani = foodOrders.find(food => food.item === "Biryani");
+console.log("38.", biryani);
+
+const firstFoodAbove250 = foodOrders.find(food => food.price > 250);
+console.log("39.", firstFoodAbove250);
+
+const totalFoodBill = foodOrders.reduce((sum, food) => sum + food.price, 0);
+console.log("40.", totalFoodBill);
+
+
+
+// Bonus Tasks
+
+const upperMovieTitles = movies.map(movie => movie.title.toUpperCase());
+console.log("41.", upperMovieTitles);
+
+const lowerProductNames = products.map(product => product.name.toLowerCase());
+console.log("42.", lowerProductNames);
+
+const studentsStartingR = students.filter(student =>
+  student.name.startsWith("R")
+);
+console.log("43.", studentsStartingR);
+
+const longMovieTitles = movies.filter(movie => movie.title.length > 5);
+console.log("44.", longMovieTitles);
+
+const combinedTotal = totalRuns + totalMarks;
+console.log("45.", combinedTotal);
+
+
+const mostExpensiveProduct = products.reduce((max, product) =>
+  product.price > max.price ? product : max
+);
+console.log("46.", mostExpensiveProduct);
+
+const highestScore = Math.max(...scores);
+console.log("47.", highestScore);
+
+const topStudent = students.reduce((top, student) =>
+  student.marks > top.marks ? student : top
+);
+console.log("48.", topStudent);
+
+const highestRatedMovie = movies.reduce((top, movie) =>
+  movie.rating > top.rating ? movie : top
+);
+console.log("49.", highestRatedMovie);
+
+
+// 50. Custom Dataset
+
+
+const employees = [
+  { id: 1, name: "Amit", salary: 30000 },
+  { id: 2, name: "Neha", salary: 45000 },
+  { id: 3, name: "Kiran", salary: 50000 },
+  { id: 4, name: "Sita", salary: 35000 }
+];
+
+// 50.1 Employee names
+console.log("50.1", employees.map(emp => emp.name));
+
+// 50.2 Salaries increased by 5000
+console.log(
+  "50.2",
+  employees.map(emp => ({
+    ...emp,
+    salary: emp.salary + 5000
+  }))
+);
+
+// 50.3 Salary > 40000
+console.log(
+  "50.3",
+  employees.filter(emp => emp.salary > 40000)
+);
+
+// 50.4 Find employee Kiran
+console.log(
+  "50.4",
+  employees.find(emp => emp.name === "Kiran")
+);
+
+// 50.5 Total salary
+console.log(
+  "50.5",
+  employees.reduce((sum, emp) => sum + emp.salary, 0)
+);
+    </script>
+</body>
+</html>
